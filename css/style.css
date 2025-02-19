@@ -1,0 +1,251 @@
+#content {
+    background-image: url("/images/milky-way.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    color: aliceblue;
+    background-color: black;
+    width: 100%;
+    margin: 0;
+}
+
+.header {
+    background-color: #000;
+    box-sizing: border-box;
+    padding: 0.5em;
+}
+
+h1, h2, p {
+    text-align: left;
+}
+
+#skip-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+  
+#skip-links a {
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 0.5rem 1rem;
+}
+  
+#skip-links a:focus {
+    position: static;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+}
+  
+h1 {
+    position: relative;
+    font-size: 1.5rem; 
+    font-weight: 200;
+    /* display: inline-block; */
+}
+
+.nav ul {
+    text-align: right;
+}
+
+.nav ul li a:link, 
+.nav ul li a:visited, 
+.nav ul li a:hover,
+.nav ul li a:active {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+.nav a{
+    display: flex;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.nav a:hover,
+.nav a:focus {
+    background-color: #000000;
+    color: #873fa2;
+    border: #000000;
+    width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+.nav-content{
+    display: flex;
+    justify-content: center;
+}
+
+#contact {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #6fa2f9;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+  
+#content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+.local-item {
+    background: #111;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+  
+.local-item img {
+    width: 100%;
+    border-radius: 50%;
+}
+  
+.local-item h3 {
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+  
+.btnLocals {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #6a0dad;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+  
+.btnLocals:hover {
+    background: #54bfed;
+}
+
+.btnLocals button {
+    background-color: #c553c5;
+    color: #ffffff;
+    border: none;
+    padding: 25px 35px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.btnLocals:hover button {
+    background-color: #51eaf2;
+    color: #ffffff;
+}
+
+.btnLocalss {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #54bfed;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+  
+.btnLocalss:hover {
+    background: #6a0dad;
+}
+
+.btnLocalss button {
+    background-color: #c553c5;
+    color: #ffffff;
+    border: none;
+    padding: 25px 35px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.btnLocalss:hover button {
+    background-color: #51eaf2;
+    color: #ffffff;
+}
+
+.footer {
+    padding: 2rem 0;
+}
+
+@media screen and (min-width:760px) {
+    * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+    }
+
+    html, body {
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .banner {
+        display: flex;
+        align-items: center;
+    }
+
+    .banner img {
+        height: 10px;
+        width: auto;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0.7rem 0;
+        text-transform: uppercase;
+        text-align: right;
+    }
+    
+    nav ul li {
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    
+    nav ul li a {
+        color: #ffffff; 
+        padding: 1rem;
+        font-size: 1.2rem;
+        text-decoration: none;
+        padding: 10px;
+    }
+}
