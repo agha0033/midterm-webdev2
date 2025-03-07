@@ -13,75 +13,77 @@
 </head>
 <body>
     <div class="container">
-        <header id="home" role="banner">
-            <h1>THE SYSTEM</h1>
-            <!-- <ul id="skip-links">
-                <li><a href="#main-nav">Skip to nav</a></li>
-                <li><a href="#content">Skip to content</a></li>
-            </ul> -->
-            <nav id="main-nav" role="navigation">
-                <ul>
-                    <li><a href="#planets">Planets</a></li>
-                    <li><a href="interstellar">Interstellar</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <!-- <section id="iconImg" role="banner">
-             <img src="images/icon.png" class="banner" alt="icon image">
-            </section> -->
-            <p>THE SYSTEM MAGAZINE</p>
-            <h2>Welcome to the Solar System</h2>
-            <p>Take a tour around the coolest stellar system around.</p>
+        <header role="banner">
+            <div class="headerContainer">
+                <h1>THE <span class="stripe"> SYSTEM </span></h1>
+                <nav role="navigation">
+                    <ul>
+                        <li><a href="#planets">Planets</a></li>
+                        <li><a href="interstellar">Interstellar</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <section class="galaxy" role="main">
+                <img src="images/milky-way.jpg" alt="milkyway">
+                <div class="milky-text">
+                    <p>THE SYSTEM MAGAZINE</p>
+                    <h2>Welcome to the <span class="colorShift"> Solar System</span></h2>
+                    <p>Take a tour around the coolest stellar system around.</p>
+                </div>
+            </section>
         </header>
         <main id="content" role="main">
-            <section id="meet-the-locals" role="region">
+            <section id="locals" role="region">
                 <h2>Meet the locals</h2>
-                <div class="localItem">
-                    <img src="images/sun.jpg" alt="An image of the Sun">
-                    <h3>The Sun</h3>
-                    <form action="https://en.wikipedia.org/wiki/Sun"    target="_blank">
-                     <button class="btnLocals" aria-label="Learn more about the Sun">Learn More</button>
-                    </form>
-                </div>
-                
-                <div class="localItem">
-                    <img src="images/mercury.jpg" alt="An image of Mercury">
-                    <h3>Mercury</h3>
-                    <form action="https://en.wikipedia.org/wiki/Mercury_(planet)" target="_blank">
-                     <button class="btnLocals" aria-label="Learn more about Mercury">Learn More</button>
-                    </form>
-                </div>
-        
-                <div class="localItem">
-                    <img src="images/venus.jpg" alt="An image of Venus">
-                    <h3>Venus</h3>
-                    <form action="https://en.wikipedia.org/wiki/Venus" target="_blank">
-                     <button class="btnLocals" aria-label="Learn more about Venus">Learn More</button>
-                    </form>
-                </div>
-        
-                <div class="localItem">
-                    <img src="images/earth.jpg" alt="An image of Earth">
-                    <h3>Earth</h3>
-                    <form action="https://en.wikipedia.org/wiki/Earth" target="_blank">
-                     <button class="btnLocalss" aria-label="Learn more about Earth">Learn More</button>
-                    </form>
-                </div>
-        
-                <div class="localItem">
-                    <img src="images/moon.jpg" alt="An image of the Moon">
-                    <h3>The Moon</h3>
-                    <form action="https://en.wikipedia.org/wiki/Moon"  target="_blank">
-                     <button class="btnLocals" aria-label="Learn more about the Moon">Learn More</button>
-                    </form>
-                </div>
-        
-                <div class="localItem">
-                    <img src="images/mars.jpg" alt="An image of Mars">
-                    <h3>Mars</h3>
-                    <form action="https://en.wikipedia.org/wiki/Mars" target="_blank">
-                     <button class="btnLocalss" aria-label="Learn more about Mars">Learn More</button>
-                    </form>
+                <div class="planets">
+                    <div class="sun">
+                        <img src="images/sun.jpg" alt="An image of the Sun">
+                        <h3>The Sun</h3>
+                        <form action="https://en.wikipedia.org/wiki/Sun"    target="_blank">
+                        <button class="btnLocals" aria-label="Learn more about the Sun">Learn More</button>
+                        </form>
+                    </div>
+                    
+                    <div class="mercury">
+                        <img src="images/mercury.jpg" alt="An image of Mercury">
+                        <h3>Mercury</h3>
+                        <form action="https://en.wikipedia.org/wiki/Mercury_(planet)" target="_blank">
+                        <button class="btnLocals" aria-label="Learn more about Mercury">Learn More</button>
+                        </form>
+                    </div>
+            
+                    <div class="venus">
+                        <img src="images/venus.jpg" alt="An image of Venus">
+                        <h3>Venus</h3>
+                        <form action="https://en.wikipedia.org/wiki/Venus" target="_blank">
+                        <button class="btnLocals" aria-label="Learn more about Venus">Learn More</button>
+                        </form>
+                    </div>
+            
+                    <div class="earth">
+                        <img src="images/earth.jpg" alt="An image of Earth">
+                        <h3>Earth</h3>
+                        <form action="https://en.wikipedia.org/wiki/Earth" target="_blank">
+                        <button class="btnLocalss" aria-label="Learn more about Earth">Learn More</button>
+                        </form>
+                    </div>
+            
+                    <div class="moon">
+                        <img src="images/moon.jpg" alt="An image of the Moon">
+                        <h3>The Moon</h3>
+                        <form action="https://en.wikipedia.org/wiki/Moon"  target="_blank">
+                        <button class="btnLocals" aria-label="Learn more about the Moon">Learn More</button>
+                        </form>
+                    </div>
+            
+                    <div class="mars">
+                        <img src="images/mars.jpg" alt="An image of Mars">
+                        <h3>Mars</h3>
+                        <form action="https://en.wikipedia.org/wiki/Mars" target="_blank">
+                        <button class="btnLocalss" aria-label="Learn more about Mars">Learn More</button>
+                        </form>
+                    </div>
                 </div>
             </section>
         </main>

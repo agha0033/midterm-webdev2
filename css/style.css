@@ -2,22 +2,67 @@
 
 }
 
-#content {
-    background-image: url("/images/milky-way.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.galaxy img {
+    width: 100%;
+    animation: zoom 8s infinite ease-in-out alternate;
+    display: block;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5); /* Makes the image larger; will be cropped by overflow: hidden on .wrapper */
+    }
+}
+
+.galaxy {
+    border-radius: 50px;    
+    overflow: hidden; /* Clips the image if it goes outside the bounds of .wrapper. */
+    position: relative; /* Refererence element for absolutely positioned text */
+   
+}
+
+.milky-text {
+    position: absolute;
+    bottom: 30px; 
+    left: 30px;
+    z-index: 5;  
+    color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 100vh;
+    justify-content: flex-end;
+}
+
+.milky-text > h2 {
+    font-weight: 400; 
+    font-size: 2rem;
+}
+.stripe {
+    position: relative;
+}
+
+.stripe::after {
+    position: absolute; 
+    content: ""; 
+    width: 100%; 
+    height: 10px;
+    right: 0;
+    bottom: 10px; 
+    background:  rgb(98, 188, 237);
+    z-index: -1; 
+}
+.img {
+    height: auto;
+    width: 100%;
 }
 
 .container {
-    color: aliceblue;
-    background-color: black;
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
 }
 
 .header {
@@ -26,34 +71,19 @@
     padding: 0.5em;
 }
 
+.colorShift {
+    background: linear-gradient(90deg, blue, rgb(0, 255, 255));
+    background-size: 200% 100%; 
+    background-position: 0% 0%; 
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: textScroll 3s infinite alternate; 
+    font-weight: 800;
+}
+
 h1, h2, p {
     text-align: center;
 }
-
-/* #skip-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-  
-#skip-links a {
-    position: absolute;
-    top: -3rem;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    padding: 0.5rem 1rem;
-}
-  
-#skip-links a:focus {
-    position: static;
-    background-color: rgb(0, 0, 0);
-    color: aliceblue;
-} */
   
 h1 {
     position: relative;
@@ -62,7 +92,16 @@ h1 {
     /* display: inline-block; */
 }
 
-.nav ul {
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    max-width: 500px;
+}
+
+/* .nav ul {
     text-align: center;
 }
 
@@ -99,7 +138,7 @@ ul{
 .nav-content{
     display: flex;
     justify-content: center;
-}
+} */
 
 #contact {
     display: inline-block;
@@ -117,7 +156,26 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
 }
-  
+
+.planets {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "sun"
+    "mercury"
+    "venus"
+    "earth"
+    "moon"
+    "mars";
+    justify-items: center;
+    gap: 15px;
+}
+
+.planets .sun {
+    grid-area: sun;
+}
+
+
 #content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -207,7 +265,7 @@ body {
 }
 /* gird area template */
 
-@media screen and (min-width:760px) {
+/* @media screen and (min-width:760px) {
     * {
        box-sizing: border-box;
        margin: 0;
@@ -253,4 +311,4 @@ body {
         text-decoration: none;
         padding: 10px;
     }
-}
+} */
