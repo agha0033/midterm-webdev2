@@ -72,20 +72,28 @@ ul > li:last-child{
     border-radius: 20px;
 }
 
-
-.galaxy > img {
+.galaxy{
     width: 100%;
     position: relative;
+    overflow: hidden;
+    height: 500px;
+    margin-bottom: 20px;
 }
 
-.milky-text{
+.galaxy img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.milky-text {
     position: absolute;
-    top: 200px;
-    right: 100px;
+    top: 350px;
+    left: 40px;
     text-align: center;
 }
 
-#locals div{
+#locals div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -142,12 +150,12 @@ ul > li:last-child{
         transform: scale(1);
     }
     to {
-        transform: scale(1.5); /* Makes the image larger; will be cropped by overflow: hidden on .wrapper */
+        transform: scale(1.5);
     }
 }
 
 .galaxy {
-    border-radius: 10px;    
+    border-radius: 10px;   
     overflow: hidden;
 }
 
@@ -161,6 +169,15 @@ ul > li:last-child{
     font-weight: 800;
 }
 
+@keyframes textScroll {
+    from {
+        background-position: 0% 0%; /* Starting position for background */
+    }
+    to {
+        background-position: 100% 0%; /* ending position: background will scroll from one side to the other. */
+    }
+}
+
 footer {
     margin-top: 30px;
     border-top: 1px solid white;
@@ -171,10 +188,31 @@ footer > p {
 }
 
 @media screen and (min-width: 900px) {
+
     .container{
         width: 100%;
-        text-align: center;
     }
+
+    .headerContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .headerContainer > h1{
+        align-items: flex-start;
+    }
+
+    .headerContainer > nav{
+        align-items: flex-end;
+    }
+
+    .galaxy{
+        height: 800px;
+    }
+
+
 
     .milky-text{
         top: 400px;
@@ -182,10 +220,31 @@ footer > p {
         text-align: left;
     }
 
-    #locals {
-        text-align: center;
+    #locals > div {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
+}
+
+@media  and (min-width:1400px) {
+    .headerContainer{
+        background-color: red;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
 
+    header > h1 {
+        align-self: flex-start;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    #locals div {
+        grid-template-columns: repeat (6, 1fr);
+    }
 }
