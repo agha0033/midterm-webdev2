@@ -100,12 +100,13 @@ ul > li:last-child {
     gap: 30px;
 }
 
-.venus button {
-    background-color: rgb(98, 188, 237);
+.planets div:nth-child(2) button{
+    background-color: #54bfed;
 }
 
-.earth button {
-    background-color: rgb(98, 188, 237);
+
+.planets div:nth-child(3) button{
+    background-color: #54bfed;
 }
 
 .btnLocals {
@@ -122,7 +123,7 @@ ul > li:last-child {
     background: #54bfed;
 }
 
-.btnLocals button {
+.btnLocals > button {
     background-color: #c553c5;
     color: #ffffff;
     border: none;
@@ -136,8 +137,6 @@ ul > li:last-child {
     background-color: #51eaf2;
     color: #ffffff;
 }
-
-
 
 .galaxy img {
     width: 100%;
@@ -173,10 +172,10 @@ ul > li:last-child {
 
 @keyframes textScroll {
     from {
-        background-position: 0% 0%; /* Starting position for background */
+        background-position: 0% 0%;
     }
     to {
-        background-position: 100% 0%; /* ending position: background will scroll from one side to the other. */
+        background-position: 100% 0%; 
     }
 }
 
@@ -190,7 +189,6 @@ footer > p {
 }
 
 @media screen and (min-width: 900px) {
-
     .container{
         width: 100%;
     }
@@ -223,9 +221,8 @@ footer > p {
     #locals > div {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        /* grid-template-rows: repeat(2, 1fr); */
     }
-    
 }
 
 @media screen and (min-width: 1400px) {
@@ -234,15 +231,15 @@ footer > p {
         flex-direction: row;
         justify-content: space-around;
     }
-
+    
     header > h1 {
         align-self: flex-start;
     }
-
+    
     .container {
-        width: 100%;
+        width: 70%;
     }
-
+    
     .milky-text {
         position: absolute;
         top: 350px;
@@ -250,9 +247,16 @@ footer > p {
         text-align: left;
         padding: 10px;
     }
-
+    
     .planets div {
-        display: grid;
-        grid-template-columns: repeat (6, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .planets > div:nth-child(6){
+        ;
+    }
+
+    #locals div {
+        grid-template-columns: repeat(6, 1fr);
     }
 }
