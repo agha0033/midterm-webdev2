@@ -188,6 +188,12 @@ footer > p {
     padding: 10px;
 }
 
+.btnLocals:hover{
+    background-color: rgb(163, 241, 205);
+    color: black;
+    transform: scale(1.2);
+}
+
 @media screen and (min-width: 900px) {
     .container{
         width: 100%;
@@ -208,9 +214,9 @@ footer > p {
         align-items: flex-end;
     }
 
-    .galaxy { 
+    /* .galaxy { 
         height: 800px;
-    }
+    } */
 
     .milky-text {
         top: 400px;
@@ -241,7 +247,7 @@ footer > p {
     .headerContainer{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     
     header > h1 {
