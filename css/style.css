@@ -181,6 +181,7 @@ footer > p {
     padding: 10px;
 }
 
+/* hover styling */
 .btnLocals:hover{
     background-color: rgb(163, 241, 205);
     color: black;
