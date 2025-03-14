@@ -1,3 +1,4 @@
+/* global color variables and fonts for easy theme management */
 :root {
     --background-color: black;
     --white-color: white;
@@ -24,8 +25,10 @@ nav ul li a {
     transition: color 0.3s;
 }
 
+/* hover state design */
 nav ul li a:hover {
     background-color: rgb(98, 188, 237);
+    border-radius: 66px;
 }
 
 header {
@@ -38,6 +41,7 @@ h1 {
     font-family: var(--header-font);
 }
 
+/* creates the blue stripe behind the system */
 .stripe {
     position: relative;
 }
@@ -100,15 +104,17 @@ ul > li:last-child {
     gap: 30px;
 }
 
-.planets div:nth-child(2) button{
+/* targeting only two buttons to achieve different color */
+.planets div:nth-child(2) button {
     background-color: #54bfed;
 }
 
 
-.planets div:nth-child(3) button{
+.planets div:nth-child(3) button {
     background-color: #54bfed;
 }
 
+/* button styling */
 .btnLocals {
     display: inline-block;
     padding: 10px 20px;
@@ -123,21 +129,6 @@ ul > li:last-child {
     background: #54bfed;
 }
 
-.btnLocals > button {
-    background-color: #c553c5;
-    color: #ffffff;
-    border: none;
-    padding: 25px 35px;
-    font-size: 1.5rem;
-    margin-top: 20px;
-    text-decoration: none;
-}
-
-.btnLocals:hover button {
-    background-color: #51eaf2;
-    color: #ffffff;
-}
-
 .galaxy img {
     width: 100%;
     height: 500px;
@@ -145,6 +136,7 @@ ul > li:last-child {
     display: block;
 }
 
+/* adds movement to the galaxy image */
 @keyframes zoom {
     from {
         transform: scale(1);
@@ -160,6 +152,7 @@ ul > li:last-child {
     box-shadow: 0 0 40px 40px rgb(235, 231, 162, 0.1);
 }
 
+/* changes the color of text */
 .colorShift {
     background: linear-gradient(90deg, blue, rgb(0, 255, 255));
     background-size: 200% 100%; 
@@ -194,6 +187,7 @@ footer > p {
     transform: scale(1.2);
 }
 
+/* design for tablet */
 @media screen and (min-width: 900px) {
     .container{
         width: 100%;
@@ -213,10 +207,6 @@ footer > p {
     .headerContainer > nav {
         align-items: flex-end;
     }
-
-    /* .galaxy { 
-        height: 800px;
-    } */
 
     .milky-text {
         top: 400px;
@@ -243,6 +233,7 @@ footer > p {
     }
 }
 
+/* design for desktop */
 @media screen and (min-width: 1400px) {
     .headerContainer{
         display: flex;
@@ -265,28 +256,20 @@ footer > p {
         text-align: left;
         padding: 10px;
     }
-    
-    .planets div {
-        grid-template-columns: repeat(6, 1fr);
-    }
-    
-    .planets > div:nth-child(6){
-        ;
-    }
 
     #locals div {
         grid-template-columns: repeat(6, 1fr);
     }
 
-    .planets div:nth-child(3) button{
+    .planets div:nth-child(3) button {
         background-color: #6a0dad;
     }
 
-    .planets div:nth-child(4) button{
+    .planets div:nth-child(4) button {
         background-color: #6a0dad;
     }
 
-    .planets div:nth-child(6) button{
+    .planets div:nth-child(6) button {
         background-color: #54bfed;
     }
 }
